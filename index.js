@@ -11,10 +11,22 @@ const router = express.Router();
 //   console.log(credentials);
 //   const AfricasTalking = require("africastalking")(credentials);
 
-router.post("/", (res, req) => {
+router.post("/", (req, res) => {
     const { sessionId, serviceCode, phoneNumber, text} = req.body;
 
     console.log("####", req.body);
 
     let response = "";
-})
+
+    if(text == "") {
+        response = `What would you like to check?
+        1. My Account
+        2. My Balance
+        `
+    } else if(text == "1") {
+        
+    }
+    res.send("END yes .....")
+});
+
+module.exports = router;
