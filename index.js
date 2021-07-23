@@ -14,16 +14,17 @@ const router = express.Router();
 router.post("/", (req, res) => {
     const { sessionId, serviceCode, phoneNumber, text} = req.body;
 
-    console.log("####", req.body);
+    console.log(req.body);
 
-    let response = "";
+    let response = "END yes";
 
     if (text == '') {
         // This is the first request. Note how we start the response with CON
-        response = `What would you like to check
+        response = `END What would you like to check
         1. My account
         2. My phone number`;
-    } else if ( text == '1') {
+    } 
+    else if ( text == '1') {
         // Business logic for first level response
         response = `Choose account information you want to view
         1. Account number`;
@@ -39,7 +40,7 @@ router.post("/", (req, res) => {
     }
 
     // Send the response back to the API
-    res.set('Content-Type: text/plain');
+    // res.set('Content-Type: text/plain');
     res.send(response);
 });
 
