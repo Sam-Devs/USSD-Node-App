@@ -1,4 +1,4 @@
-# Canza-USSD
+# USSD-Node-App
 
 ### Before you run the app, you have to run ngrok
  - [Set up or sign in](https://dashboard.ngrok.com/login) into your Ngrok Account
